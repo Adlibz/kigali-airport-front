@@ -1,0 +1,23 @@
+/*
+* ------------------------------------------------------------------------
+* Banner Section
+* ------------------------------------------------------------------------
+*/
+
+.banner {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-position: center;
+
+    .title {
+        text-transform: uppercase;
+        font-size: 5.5rem;
+    }
+
+    &.hero {
+        padding-top: 100px;
+        padding-bottom: 150px;
+    }
+}

@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'seven segment';
+    src: url(../fonts/Seven-Segment.ttf);
+}
+
+/* --------------------- Configs --------------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5% !important;
+}
+
+body {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all 0.5s;
+
+    &.link {
+        font-size: 1.5rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+button {
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.spacing {
+    &-lg {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &-md {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    &-sm {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+/* --------------------- Buttons --------------------- */
+.btn {
+    &:disabled {
+        cursor: not-allowed;
+    }
+
+    align-items: center;
+    &__icon {
+        margin-right: 0.6rem;
+    }
+}
+
+/* --------------------- Toast --------------------- */
+.toastBody {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --------------------- title --------------------- */
+.title {
+    &-secondary {
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid $gray-200;
+    }
+
+    &-tertiary {
+        font-size: 1.6rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $gray-200;
+    }
+}
+
+/* --------------------- logo image --------------------- */
+.logo-image {
+    max-width: 100px;
+}
+
+@mixin clearfix {
+    *zoom: 1;
+
+    &:after {
+        content: ' ';
+        clear: both;
+        display: block;
+        overflow: hidden;
+        height: 0;
+    }
+}
+
+/* Print Styles */
+.no-print {
+    @media print {
+        display: none !important;
+        visibility: hidden !important;
+    }
+}
+
+@media print {
+    p {
+        margin-bottom: 0 !important;
+    }
+
+    body,
+    html {
+        color: $black;
+        border-color: $black;
+    }
+
+    table,
+    .table {
+        overflow: hidden;
+
+        th,
+        td {
+            color: $black;
+            border: 1px solid $black !important;
+            width: 150px !important;
+            max-width: 150px !important;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+    }
+
+    .table-responsive {
+        width: 100%;
+        overflow: auto;
+
+        table {
+            max-width: 100%;
+        }
+    }
+}

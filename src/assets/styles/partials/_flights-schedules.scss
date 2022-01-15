@@ -1,0 +1,76 @@
+/*
+* ------------------------------------------------------------------------
+* Flights Schedules
+* ------------------------------------------------------------------------
+*/
+
+.flights-header {
+    padding-bottom: 8rem;
+    color: $white;
+    margin-top: -4rem;
+
+    .title {
+        font-size: 5.5rem;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 8px rgba(1, 1, 1, 0.75);
+    }
+
+    .alert-timed {
+        background-color: rgba($white, 0.9);
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 15px 20px;
+        color: $dark;
+        font-size: 90%;
+        max-width: 900px;
+        position: relative;
+        text-align: left;
+    }
+}
+
+.flights-wrapper {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.flights-container {
+    background-color: $gray-100;
+    padding: 10px;
+    position: relative;
+    z-index: 5;
+
+    .tabs {
+        position: absolute;
+        top: -43px;
+        left: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: -1;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .tab {
+        button {
+            display: inline-block;
+            padding: 1rem 1.5rem;
+            background-color: rgba($black, 0.4);
+            color: $white;
+            font-size: 1.4rem;
+            border: none;
+            outline: none;
+
+            &.active {
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+
+    // .tab-content {
+    // }
+}
